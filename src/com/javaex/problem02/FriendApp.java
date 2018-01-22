@@ -13,15 +13,28 @@ public class FriendApp {
 
 		System.out.println("친구를 3명 등록해 주세요.");
 
+//		for (int i = 0; i < 3; i++) {
+//			String friendInfo = scan.nextLine(); // 정보입력받고
+//			String[] friend_info = friendInfo.split(" "); // 공백으로 나누고
+//			Friend friend = new Friend(); // 객체생성
+//			friend.setName(friend_info[0]); // 정보입력
+//			friend.setHp(friend_info[1]);
+//			friend.setSchool(friend_info[2]);
+//			friendList.add(friend);
+//		}
+		
 		for (int i = 0; i < 3; i++) {
-			String friendInfo = scan.nextLine(); // 정보입력받고
-			String[] friend_info = friendInfo.split(" "); // 공백으로 나누고
-			Friend friend = new Friend(); // 객체생성
-			friend.setName(friend_info[0]); // 정보입력
-			friend.setHp(friend_info[1]);
-			friend.setSchool(friend_info[2]);
-			friendList.add(friend);
+		String friendInfo = scan.nextLine(); // 정보입력받고
+		String a = friendInfo.split(" ")[0]; // 공백으로 나누고
+		String b = friendInfo.split(" ")[1]; // 공백으로 나누고
+		String c = friendInfo.split(" ")[2]; // 공백으로 나누고
+		Friend friend = new Friend(); // 객체생성
+		friend.setName(a); // 정보입력
+		friend.setHp(b);
+		friend.setSchool(c);
+		friendList.add(friend);
 		}
+		
 
 		for (Friend fr : friendList) {
 			fr.showInfo();
